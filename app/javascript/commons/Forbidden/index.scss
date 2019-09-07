@@ -1,0 +1,14 @@
+.not-found {
+  min-height: 350px;
+  color: #979797;
+
+  &-img {
+    span {
+      font-size: 120px;
+    }
+  }
+
+  &-text {
+    font-size: 36px;
+  }
+}

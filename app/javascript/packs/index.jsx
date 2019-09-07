@@ -4,23 +4,21 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+import App from '../commons/index'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
-
-Hello.defaultProps = {
-  name: 'David'
-}
-
-Hello.propTypes = {
-  name: PropTypes.string
-}
-
-document.addEventListener('DOMContentLoaded', () => {
+const renderApp = (Component) => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <Component name="React" />,
     document.body.appendChild(document.createElement('div')),
   )
+}
+document.addEventListener('DOMContentLoaded', () => {
+  renderApp(App);
 })
+
+if (process.env.NODE_ENV !== 'production' && module.hot) {
+  module.hot.accept('../commons/index', () => {
+    const NextApp = require('../commons/index').default;
+    renderApp(NextApp);
+  })
+}

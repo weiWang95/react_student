@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resource :home, only: [:show]
+
+  root 'homes#show'
+
+  defaults format: :json do
+    scope :api do
+      resource :sessions, only: %i[create show destroy]
+
+      match '*path', to: 'api#render_not_found', via: :all
+    end
+  end
+
+  match '*path', to: 'homes#show', via: :all
 end

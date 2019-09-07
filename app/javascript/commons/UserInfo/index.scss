@@ -1,0 +1,15 @@
+.navbar-user-info {
+  .login-or-register {
+    & > a {
+      padding: 0 5px;
+    }
+  }
+
+  .user-avatar {
+    margin: 0 20px;
+    cursor: pointer;
+    color: #f56a00;
+    font-size: 24px;
+    background: #fde3cf;
+  }
+}

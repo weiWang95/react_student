@@ -1,0 +1,6 @@
+user =
+  if current_user
+    current_user.as_json(only: %i[id username description])
+  end
+
+{ user: user }

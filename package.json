@@ -2,15 +2,26 @@
   "name": "react_student",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "^4.0.7",
+    "antd": "^3.20.7",
+    "axios": "^0.19.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "mobx": "^5.13.0",
+    "mobx-react": "^6.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-bootstrap": "1.0.0-beta.9",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.12.0",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.0.1"
   },
   "version": "0.1.0",
   "devDependencies": {
